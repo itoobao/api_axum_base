@@ -1,6 +1,6 @@
 use crate::common::Error;
 use axum::{
-    http::{header, Method, Request, StatusCode},
+    http::{header, Request},
     middleware::Next,
     response::Response,
 };
