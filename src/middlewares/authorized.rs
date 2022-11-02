@@ -15,5 +15,10 @@ pub async fn token<B>(mut req: Request<B>, next: Next<B>) -> Result<Response, Er
     } else {
         return Err(Error::CommonError);
     };
+
+    //get
+    //let param = req.uri().query().unwrap_or_default();
+    //post
+
     Ok(next.run(req).await)
 }

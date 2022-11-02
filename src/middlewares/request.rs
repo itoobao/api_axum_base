@@ -9,5 +9,6 @@ pub async fn before<B>(mut req: Request<B>, next: Next<B>) -> Result<Response, S
     if req.method() == Method::OPTIONS {
         return Err(StatusCode::OK);
     }
+
     Ok(next.run(req).await)
 }
