@@ -1,16 +1,23 @@
-[package]
-name = "axum基础框架"
-version = "0.1.0"
-edition = "2021"
+# [package]
+# name = "axum基础框架"
+# version = "0.1.0"
+# edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-axum = "0.5"
-tokio = { version = "1.21", features = ["full"] }
+# [dependencies]
+# axum = "0.5"
+# tokio = { version = "1.21", features = ["full"] }
 
-# 日志
-tracing-subscriber = "0.3.6"
-tracing = "0.1"
+# # 日志
+# tracing-subscriber = "0.3.6"
+# tracing = "0.1"
 
-serde = { version = "1", features = ["derive"] }
+# serde = { version = "1", features = ["derive"] }
+
+[workspace]
+resolver = "2"
+members = [
+    "itoo_web",
+    "itoo_config"
+]
